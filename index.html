@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namami Gange - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Namami Gange</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#components">Components</a>
+      <a href="#participate">Participate</a>
+    </div>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to Namami Gange Initiative</h1>
+    <img src="ganga.jpg" class="home-img" alt="River Pollution Visual">
+    <div class="dashboard">
+      <h2>Build Your Own IoT-Based Water Quality Monitoring System</h2>
+      <p>Follow our detailed dashboard to create your own system for monitoring water quality.</p>
+      <ul>
+        <li>Understand the importance of clean water.</li>
+        <li>Learn sensor integration and Arduino setup.</li>
+        <li>Deploy your solution to monitor local water sources.</li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>The <strong>Namami Gange Programme</strong> is an integrated conservation mission approved as a flagship programme by the Union Government to accomplish the twin objectives of effective abatement of pollution, conservation and rejuvenation of National River Ganga.</p>
+    <p>Visit the <a href="https://nmcg.nic.in/" target="_blank">NMCG official site</a> for ongoing project updates.</p>
+    <h3>Key Achievements</h3>
+    <ul>
+      <li>Sewage Treatment Infrastructure</li>
+      <li>River Surface Cleaning</li>
+      <li>Afforestation Drives</li>
+      <li>Public Awareness Campaigns</li>
+    </ul>
+  </section>
+
+  <section id="components">
+    <h2>Components</h2>
+    <div class="components-grid">
+      <div class="component">
+        <h3>Arduino UNO</h3>
+        <p>Main microcontroller board used to process sensor data.</p>
+        <img src="arduino.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+      <div class="component">
+        <h3>Turbidity Sensor</h3>
+        <p>Measures the clarity of water by detecting suspended particles.</p>
+        <img src="turbidity.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+      <div class="component">
+        <h3>16*2 I2C LCD </h3>
+        <p>It is an I2C interface with 16x2 LCD display.</p>
+        <img src="display.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+      <div class="component">
+        <h3>Common cathode RGB-LED  </h3>
+        <p>The typical cathode for RGB-LEDs.</p>
+        <img src="cathode.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+      <div class="component">
+        <h3>Breadboard</h3>
+        <p>Building temporary circuits requires the use of a breadboard, 
+            often known as a plug block.</p>
+        <img src="bread.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+      <div class="component">
+        <h3>Jumper wires </h3>
+        <p>Jump wires are cables made up of several electrical wires that 
+          have connectors or pins at either end.</p>
+          <img src="jumper.jpg" alt="" style="width: 100%; height: auto; border-radius: 5px;">
+      </div>
+    </div>
+    <div>
+      <h3>System Testing</h3>
+      <p>
+        Calibration is carried out to check the measurement accuracy of the system's sensor. According to the values entered into 
+        the application, the output is presented. The actions taken to 
+        test the sensor are listed below: 
+      </p>
+    <ol>
+      <li>Gather some samples of clean, hazy, and dirty water. </li>
+      <li>Properly insert the sensor into the water samples.</li>
+      <li>Run the Arduino Software application in parallel. </li>
+      <li>Write down the value that the sensor read. </li>
+      <li>Compare the recorded value to the values listed in the 
+      programme. </li>
+      <li>If the turbidity of the water is (turbidity < 15), show it as 
+      clear water. </li>
+      <li>Display water as cloudy if the turbidity is (turbidity> 
+      15) && (turbidity<50).</li>
+      <li>Display water as dirty if the turbidity is (turbidity > 50).</li>
+      <li>The turbidity of the water is tested when samples are 
+      delivered, and the results are shown on an LCD. </li>
+    </ol>
+    <img src="2025-04-25 11 02 05.jpg" alt="">
+    </div>
+
+    <div>
+      <h3>System Architecture</h3>
+      <img src="2025-04-25 11 06 53.jpg" alt="">
+      <h3>Methodology</h3>
+      <img src="2025-04-25 11 09 41.jpg" alt="">
+      <p>
+        The SCL to A5 and SDA to A4 I2C pins of the Arduino are 
+        used to connect the I2C LCD to the Arduino. The turbidity 
+        sensor output is analogue, thus it is tied to the Arduino's A0 
+        pin. Digital pins D2, D3, and D4 were next used to connect 
+        the RGB LED. After connecting ground to ground, connect 
+        the sensor's VCC to the Arduino's 5volt supply. The sensor's 
+        output pin to Arduino's analog 0 pin. Connect the LCD 
+        module's VCC and ground to the Arduino's 5v and ground 
+        next. Pins A4 and A5 on the Arduino I2C pins are used for 
+        SDA and SCL, respectively. Green, blue, and red are 
+        connected to D2, D3, and D4, respectively, with the ground of 
+        the RGB LED eventually being connected to the Arduino's 
+        ground. 
+      </p>
+    </div>
+  </section>
+
+  <section id="participate">
+  <h2>Participate Now</h2>
+  <form id="participationForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="City / Town" required>
+    <textarea rows="4" placeholder="Why do you want to participate?" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Success Message Box -->
+  <div id="successMessage" class="message-box">
+    <div class="message-content">
+      <h3>🎉 Thank you for participating!</h3>
+      <p>We appreciate your interest in contributing to the Namami Gange Mission.</p>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Namami Gange Initiative</p>
+    <p>
+      <a href="#home">Home</a> |
+      <a href="#about">About Us</a> |
+      <a href="#components">Components</a> |
+      <a href="#participate">Participate</a>
+    </p>
+  </footer>
+
+  <script>
+  // Smooth Section Reveal
+  const sections = document.querySelectorAll("section, header, footer");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // Form Success Popup Logic
+  const form = document.getElementById('participationForm');
+  const messageBox = document.getElementById('successMessage');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    // Show message box
+    messageBox.style.display = 'flex';
+
+    // Auto-close message after 3 seconds
+    setTimeout(() => {
+      messageBox.style.display = 'none';
+      form.reset();
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>
